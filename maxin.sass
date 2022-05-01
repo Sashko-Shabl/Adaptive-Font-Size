@@ -1,0 +1,5 @@
+$maxWidth: 1280 //Maximum layout width
+@mixin adaptive-font($pcFontSize, $mobFontSize)
+    $addSize: $pcFontSize - $mobFontSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobFontSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
